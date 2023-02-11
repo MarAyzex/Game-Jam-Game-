@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private float moveHorizontal;
     private float moveVertical;
+    public GameObject deathScreen;
 
 
 
@@ -48,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Ground")
         {
             isJumping = false;
+        }
+
+        if(collision.gameObject.tag == "Death")
+        {
+            deathScreen.SetActive(true);
         }
 
     }
