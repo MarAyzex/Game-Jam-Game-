@@ -4,43 +4,59 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
-    private float playerSpeed = 2.0f;
-    private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
+    private Rigidbody2D rb2D;
+
+    private float moveSpeed;
+    private float jumpForce;
+    private bool isJumping;
+    private float moveHorizontal;
+    private float moveVertical;
+
 
 
     void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
+
+        moveSpeed = 3f;
+        jumpForce = 10F;
+        isJumping = false;
     }
 
     
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveVertical = Input.GetAxisRaw("Vertical");
+    }
+
+    void FixedUpdate()
+    {
+        if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
-            playerVelocity.y = 0f;
+            rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
         }
 
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * playerSpeed);
-
-        if (move != Vector3.zero)
+        if (!isJumping && moveVertical > 0.1f)
         {
-            gameObject.transform.forward = move;
+            rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Ground")
+        {
+            isJumping = false;
         }
 
-        if (Input.GetButtonDown("Jump") && groundedPlayer)
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+            isJumping = true;
         }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
-
     }
 }
