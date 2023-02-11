@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -59,4 +60,6 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
     }
+
+   
 }
