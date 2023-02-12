@@ -12,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     public GameObject deathScreen;
-
-
-
+    
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
@@ -49,10 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
-        {
-            isJumping = false;
-        }
+
 
         if(collision.gameObject.tag == "Death")
         {
@@ -68,5 +63,22 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isJumping = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isJumping = true;
+        }
+    }
+
    
 }
