@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+
     }
 
     void FixedUpdate()
@@ -66,6 +68,5 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
     }
-
    
 }
