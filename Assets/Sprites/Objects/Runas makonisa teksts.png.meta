@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 2b6d6824187f430429cb4524a268f423
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Runas makonisa teksts_0
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 386
+        width: 249
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c620ef8ce3cb25048b76a2c22c44ee81
+      internalID: 1528206008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Runas makonisa teksts_12
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 266
+        width: 354
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900974b46f07b36499b15fcd5a94ca8c
+      internalID: 397113219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Runas makonisa teksts_35
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 145
+        width: 329
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f2199738865a54abf6e355f2df2b43
+      internalID: -468091101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Runas makonisa teksts_55
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 81
+        width: 328
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e41414400832c4aa4b59d41e0343e7
+      internalID: -275457369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Runas makonisa teksts_67: 337638169
+      Runas makonisa teksts_35: -468091101
+      Runas makonisa teksts_26: -1380943021
+      Runas makonisa teksts_8: -328726585
+      Runas makonisa teksts_36: 512589517
+      Runas makonisa teksts_40: 1640054323
+      Runas makonisa teksts_53: -837537466
+      Runas makonisa teksts_42: 94535914
+      Runas makonisa teksts_9: 1247647381
+      Runas makonisa teksts_23: 1673439024
+      Runas makonisa teksts_11: 872670557
+      Runas makonisa teksts_31: 902772613
+      Runas makonisa teksts_25: -1679661821
+      Runas makonisa teksts_49: -852344078
+      Runas makonisa teksts_5: 858072325
+      Runas makonisa teksts_58: 1637201453
+      Runas makonisa teksts_0: 1528206008
+      Runas makonisa teksts_22: -704682752
+      Runas makonisa teksts_57: -1478775859
+      Runas makonisa teksts_12: 397113219
+      Runas makonisa teksts_24: -794452507
+      Runas makonisa teksts_62: -754456269
+      Runas makonisa teksts_44: -842592816
+      Runas makonisa teksts_59: 107189013
+      Runas makonisa teksts_48: 2020146741
+      Runas makonisa teksts_1: 204305265
+      Runas makonisa teksts_66: 1830556885
+      Runas makonisa teksts_34: -1084572987
+      Runas makonisa teksts_51: -94670831
+      Runas makonisa teksts_55: -275457369
+      Runas makonisa teksts_6: 900041286
+      Runas makonisa teksts_38: 1376818145
+      Runas makonisa teksts_16: 905530180
+      Runas makonisa teksts_13: -473092940
+      Runas makonisa teksts_10: 712742558
+      Runas makonisa teksts_39: -419029117
+      Runas makonisa teksts_54: -545778073
+      Runas makonisa teksts_4: 359043562
+      Runas makonisa teksts_46: 1228385095
+      Runas makonisa teksts_21: -676130198
+      Runas makonisa teksts_28: -73173968
+      Runas makonisa teksts_41: -1878507464
+      Runas makonisa teksts_32: 686316357
+      Runas makonisa teksts_19: 446824873
+      Runas makonisa teksts_29: -201480200
+      Runas makonisa teksts_43: -452008066
+      Runas makonisa teksts_2: -787762198
+      Runas makonisa teksts_20: 442371377
+      Runas makonisa teksts_3: -523582700
+      Runas makonisa teksts_45: -1816256840
+      Runas makonisa teksts_37: -60470788
+      Runas makonisa teksts_18: 1473463637
+      Runas makonisa teksts_33: -1734252261
+      Runas makonisa teksts_30: 836551532
+      Runas makonisa teksts_63: 983684624
+      Runas makonisa teksts_60: -1424766321
+      Runas makonisa teksts_7: 1807670095
+      Runas makonisa teksts_17: -542920820
+      Runas makonisa teksts_65: -121429306
+      Runas makonisa teksts_52: -2052109853
+      Runas makonisa teksts_14: -132591082
+      Runas makonisa teksts_47: 1548814758
+      Runas makonisa teksts_56: 2124825290
+      Runas makonisa teksts_64: 1059382506
+      Runas makonisa teksts_27: 909649229
+      Runas makonisa teksts_15: 1748328721
+      Runas makonisa teksts_50: 1213242959
+      Runas makonisa teksts_61: 347108104
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

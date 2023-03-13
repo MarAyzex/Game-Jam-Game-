@@ -43,3 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3218216785
+    locked: 0
+  - name: Ground till checkpoint
+    uniqueID: 125238011
+    locked: 0
+  - name: Objects
+    uniqueID: 953001645
+    locked: 0
