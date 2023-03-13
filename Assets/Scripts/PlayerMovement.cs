@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "Death")
         {
             deathScreen.SetActive(true);
+            rb2D.bodyType = RigidbodyType2D.Static;
         }
 
     }
@@ -80,5 +81,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    
    
 }
