@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
         
     }
 
-    // For camera follow while jumping add "player." to "transform.position.y"
+    
     void Update()
     {
         transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);

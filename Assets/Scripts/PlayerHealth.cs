@@ -1,30 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
-    public static event Action OnPlayerDeath;
-    public float health, maxHealth;
+    public int playerHealth;
+
+    [SerializeField] private Image[] hearts;
+
     private void Start()
     {
-        health = maxHealth;
+        UpdateHealth();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealth()
     {
-        
-    }
-
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
-        if(health <= 0)
+        for (int i = 0; i < hearts.Length; i++)
         {
-            health = 0;
-            OnPlayerDeath?.Invoke();
-            
+            if(i < playerHealth)
+            {
+                hearts[i].color = Color.red;
+            }
+            else
+            {
+                hearts[i].color = Color.black;
+            }
         }
     }
 }

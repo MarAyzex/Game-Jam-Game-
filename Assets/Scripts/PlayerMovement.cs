@@ -12,14 +12,19 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     public GameObject deathScreen;
+
+    public PlayerHealth playerHealth;
+    private Vector3 startPosition;
     
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
 
-        moveSpeed = 3f;
-        jumpForce = 10F;
+        moveSpeed = 2f;
+        jumpForce = 9F;
         isJumping = false;
+
+        startPosition = transform.position;
     }
 
     
@@ -51,8 +56,27 @@ public class PlayerMovement : MonoBehaviour
 
         if(collision.gameObject.tag == "Death")
         {
-            deathScreen.SetActive(true);
-            rb2D.bodyType = RigidbodyType2D.Static;
+
+
+            playerHealth.playerHealth--;
+            playerHealth.UpdateHealth();
+
+            if (playerHealth.playerHealth <=0)
+            {
+                deathScreen.SetActive(true);
+                rb2D.bodyType = RigidbodyType2D.Static;
+
+            } else
+            {
+                //playerHealth.playerHealth = 11; ;
+                //playerHealth.UpdateHealth();
+                transform.position = startPosition;
+                //respawn
+            }
+
+
+
+            ///
         }
 
     }
