@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb2D;
+    [SerializeField] private Rigidbody2D rb2D;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
-    private float moveSpeed;
-    private float jumpForce;
+    private float moveSpeed = 8f;
+    private float jumpPower = 16f;
     private bool isJumping;
+    private bool isFacingRight = true;
     private float moveHorizontal;
     private float moveVertical;
     public GameObject deathScreen;
@@ -19,9 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-
-        moveSpeed = 2f;
-        jumpForce = 9F;
+        
         isJumping = false;
 
         startPosition = transform.position;
@@ -31,23 +32,39 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
 
+        if(Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, jumpPower);
+        }
 
+        if (Input.GetButtonUp("Jump") && rb2D.velocity.y > 0f)
+        {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y * 0.5f);
+        }
+
+        Flip();
     }
 
     void FixedUpdate()
     {
-        if(moveHorizontal > 0.1f || moveHorizontal < -0.1f)
-        {
-            rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
-        }
+        rb2D.velocity = new Vector2(moveHorizontal * moveSpeed, rb2D.velocity.y);
+    }
 
-        if (!isJumping && moveVertical > 0.1f)
-        {
-            rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
-        }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
 
+    private void Flip()
+    {
+        if (isFacingRight && moveHorizontal < 0f || !isFacingRight && moveHorizontal > 0f)
+        {
+            isFacingRight = isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)

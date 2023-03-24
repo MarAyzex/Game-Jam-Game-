@@ -1,28 +1,28 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrapEnabler : MonoBehaviour
+public class InvisibleObjects : MonoBehaviour
 {
-    public GameObject Trap;
-    
+    public GameObject isInvisible;
+
 
     void Start()
     {
-        
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    
+   
     void Update()
     {
         
     }
-    //var arī ar gravity, bet tad jānomaina gameobject uz rigidbody
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Trap.SetActive(true);
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }
