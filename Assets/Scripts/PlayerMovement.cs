@@ -83,20 +83,22 @@ public class PlayerMovement : MonoBehaviour
                 deathScreen.SetActive(true);
                 rb2D.bodyType = RigidbodyType2D.Static;
 
-            } else
+            } 
+            else
             {
                 //playerHealth.playerHealth = 11; ;
                 //playerHealth.UpdateHealth();
                 transform.position = startPosition;
-                //respawn
-            }
-
-
-
-            ///
+                
+               // if (collision.tag == "Checkpoint")
+                //{
+                   // startPosition = transform.position;
+                //}
+            } 
         }
-
     }
+
+    
 
     void OnTriggerExit2D(Collider2D collision)
     {
